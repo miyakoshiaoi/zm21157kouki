@@ -7,53 +7,7 @@
 
 <body>
   <h1>質問</h1>
-  <?php
-
-  $aryShindan = [];
-
-  $cnt = 1;
-  $aryShindan[$cnt]['question'] = 'ゆっくりしている曲より、速いテンポの曲が好き';
-  $aryShindan[$cnt]['answer'][] = ['point' => 'm', 'text' => 'はい'];
-  $aryShindan[$cnt]['answer'][] = ['point' => 't', 'text' => 'いいえ'];
-
-  $cnt = 2;
-  $aryShindan[$cnt]['question'] = 'ベースラインの強い曲を好む';
-  $aryShindan[$cnt]['answer'][] = ['point' => 'm', 'text' => 'はい'];
-  $aryShindan[$cnt]['answer'][] = ['point' => 'y', 'text' => 'いいえ'];
-
-  $cnt = 3;
-  $aryShindan[$cnt]['question'] = '一人で音楽を聴く時間の方が多い';
-  $aryShindan[$cnt]['answer'][] = ['point' => 't', 'text' => 'はい'];
-  $aryShindan[$cnt]['answer'][] = ['point' => 'z', 'text' => 'いいえ'];
-
-  $cnt = 4;
-  $aryShindan[$cnt]['question'] = '人より音楽を聴く時間が長いと思う';
-  $aryShindan[$cnt]['answer'][] = ['point' => 't', 'text' => 'はい'];
-  $aryShindan[$cnt]['answer'][] = ['point' => 'm', 'text' => 'いいえ'];
-
-  $cnt = 5;
-  $aryShindan[$cnt]['question'] = '歌詞を考えてじっくり聞きたいタイプ';
-  $aryShindan[$cnt]['answer'][] = ['point' => 'y', 'text' => 'はい'];
-  $aryShindan[$cnt]['answer'][] = ['point' => 'z', 'text' => 'いいえ'];
-
-?>
-
-
-  <form method="post" action="shidanresult.html">
-  <?php foreach($aryShindan as $key1 => $val1){ ?>
-    <!-- 質問文 -->
-    <p style="font-weight:bold;"><?php echo $key1.'.'.$val1['question'] ?></p>
-    <?php foreach($val1['answer'] as $key2 => $val2){ ?>
-    <!-- 　選択肢 -->
-    <div><label><input required type="radio" name="shindan<?php echo $key1 ?>" value="<?php echo $val2['point'] ?>"> <?php echo $val2['text'] ?></label></div>
-    <?php } ?>
-  <?php } ?>
-    <input class="bold" type="submit" value="回答する">
-  </form>
-
-  
-  
-  
+ 
   </body>
   </html>
 
