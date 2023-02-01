@@ -8,36 +8,5 @@
 <body>
   <h1>診断結果</h1>
 
-<?php
-
-// 診断結果を受け取る変数
-$result_z = 0;
-$result_t = 0;
-$result_m = 0;
-$result_y = 0;
-
-// 診断結果を集計
-foreach($_POST as $key => $value){
-    if($value === 'z'){
-        $result_z++;
-    } elseif ($value === 't') {
-        $result_t++;
-    }elseif ($value === 'm') {
-        $result_m++;
- }elseif ($value === 'y') {
-        $result_y++;
-}
-
-// 診断結果を集計結果により、診断結果の文章を変更!
-if($result_z > $result_e){
-    $result = '診断結果：内向型（I）';
-}else{
-    $result = '診断結果：外向型（E）';
-}
-?>
-
-  <!-- 診断結果を表示 -->
-  <p><?php echo $result ?></p>
-
 </body>
 </html>
